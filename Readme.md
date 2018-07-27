@@ -18,18 +18,18 @@ Build a Fully-Fledged Todo App with Spring Boot & MongoDB in the Backend and Ang
 git clone https://github.com/callicoder/spring-boot-mongodb-angular-todo-app.git
 ```
 
-**2. Build and run the backend app using maven**
+**2. Build and run the backend app using maven wrapper**
 
 ```bash
 cd spring-boot-backend
-mvn package
+mvnw package
 java -jar target/todoapp-1.0.0.jar
 ```
 
 Alternatively, you can run the app without packaging it using -
 
 ```bash
-mvn spring-boot:run
+mvnw spring-boot:run
 ```
 
 The backend server will start at <http://localhost:8080>.
