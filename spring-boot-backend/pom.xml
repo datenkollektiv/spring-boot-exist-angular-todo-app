@@ -33,6 +33,42 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>javax.xml.xquery</groupId>
+			<artifactId>xqj-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.xqj2</groupId>
+			<artifactId>xqj2</artifactId>
+			<version>0.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-oxm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>de.datenkollektiv.sandbox</groupId>
+			<artifactId>spring-data-xml</artifactId>
+			<version>0.1-SNAPSHOT</version>
+		</dependency>
+		<!--implementation 'ch.qos.logback:logback-classic:1.2.3'-->
+		<!--implementation "org.springframework:spring-context:$springFrameworkVersion"-->
+
+		<!-- locally installed -->
+		<dependency>
+			<groupId>com.xqj</groupId>
+			<artifactId>exist-xqj-api</artifactId>
+			<version>1.0.1</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

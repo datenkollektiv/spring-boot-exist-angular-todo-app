@@ -8,6 +8,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import java.util.UUID;
+
+import static java.util.UUID.randomUUID;
 
 @RestController
 @RequestMapping("/api")
@@ -20,12 +23,13 @@ public class TodoController {
     @GetMapping("/todos")
     public List<Todo> getAllTodos() {
         Sort sortByCreatedAtDesc = new Sort(Sort.Direction.DESC, "createdAt");
-        return todoRepository.findAll(sortByCreatedAtDesc);
+        return todoRepository.findAll(/*sortByCreatedAtDesc*/);
     }
 
     @PostMapping("/todos")
     public Todo createTodo(@Valid @RequestBody Todo todo) {
         todo.setCompleted(false);
+        todo.setId(randomUUID().toString());
         return todoRepository.save(todo);
     }
 

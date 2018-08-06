@@ -1,26 +1,24 @@
 package com.example.todoapp.models;
 
-import java.util.Date;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.Indexed;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.xml.bind.annotation.*;
+import java.util.Date;
 
-@Document(collection="todos")
-@JsonIgnoreProperties(value = {"createdAt"}, allowGetters = true)
+@XmlRootElement(name = "todo-item")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Todo {
-    @Id
+
+    @XmlAttribute(name = "id")
     private String id;
 
     @NotBlank
-    @Size(max=100)
-    @Indexed(unique=true)
+    @Size(max = 100)
     private String title;
 
     private Boolean completed = false;
 
+    @XmlTransient
     private Date createdAt = new Date();
 
     public Todo() {
